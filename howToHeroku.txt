@@ -1,0 +1,74 @@
+1. first we install all needed dependencies like express, ejs and ect... 
+it is importaint to USE "--save" while installing, so the "pacjage.json " has all dependencies, cuz when we send the app to heroku the heroku will install the dependencies according to ".json" so if we missing something heroku will not install this
+
+> npm init
+> npm install express ejs --save
+
+2. then we need to log in in HEROKU using teminal
+> heroku login -i  
+to make the app-directory ready for heroku
+
+3. we need to add start script for heroku, so the heroku will start the app, not me:
+
+we go to "package.json" and add "start": "node app.js" in "scripts" line so it looks like this:
+
+DON'T FORGET TO ADD "," BEFORE "start" !!!!
+
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"start": "node app.js"
+  }
+
+4. after that we need to make the folder to a GIT repository 
+> git init
+
+then we add initial files for the first commit:
+> git add app.js
+> git add package.json
+> git add views/
+> git commit -m "initial commit"
+
+5. make an app inside heroku with a random heroku-given name and url where the app will be deployed to
+> heroku create 
+
+also a git remote has been added:
+> git remote -v  //to see info where to push code
+
+ heroku  https://git.heroku.com/dry-journey-42780.git (fetch)
+ heroku  https://git.heroku.com/dry-journey-42780.git (push)
+
+
+6. push code that i commited on a master branch over to heroku
+> git push heroku master 
+
+if there is an error in the app, the heroku won't show it, so the user could not see these
+
+we can see errors in our terminal:
+> heroku logs
+
+after that when we debagged the error, we need to commit this file in git and then push again with "git push heroku master" 
+
+================
+
+after every ERROR HANDLING !:
+
+add and commit the eddited file with git then "git push heroku master" like this:
+
+root@goorm:/workspace/webDevBootcamp/377_HerokuDeploying(master)# git add app.js
+root@goorm:/workspace/webDevBootcamp/377_HerokuDeploying(master)# git commit -m "rewrite port listener in app.js"
+root@goorm:/workspace/webDevBootcamp/377_HerokuDeploying(master)# git push heroku master
+
+
+we use IDE to make demos, play, costomize the web-app, and only at the very end when we are ready to ise the app, we push
+
+
+=========================
+
+we can also use herokus's terminal using our terminal
+
+> heroku run ls  //as example t show what was pushed and stored right now in our heroku's container
+
+> heroku run npm install mongoose --save  // if we want to install something inside the heroku container
+
+
+

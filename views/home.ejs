@@ -1,0 +1,131 @@
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <!-- we make a style tag for a CSS to make a background for the jumbotron -->
+    <style>
+        #header{
+            /* if we don't add "do center center / cover no-repeat;" (center the image horizontaly and verticaly and  ) the background 
+            image of the jumbotron will not behave how we want - not centered and unscaled when we size it */
+            background: url("../images/header.jpeg") center center / cover no-repeat;
+            /* background: url("Starter/imgs/header.jpeg"); or we can not apply this */
+        }
+    </style>
+
+    <title>И.П. Толстых</title>
+  </head>
+
+  <body>
+      <!-- we write "navbar-dark" so the words have a white color (it does not match but it just the way it is)-->
+      <!-- we can also write: <nav class="navbar bg-dark navbar-dark" style="background: cyan;"> to add another background for a navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">И.П. Толстых</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#"><span class="sr-only">(current)</span></a>
+      </li>
+		
+      <li class="nav-item"> 
+		<!-- add a foto route-->
+        <a class="nav-link" href="/foto">Фото работ</a>
+      </li>
+		
+      <li class="nav-item">
+        <a class="nav-link" href="/price">Цены</a>
+      </li>
+		
+	  <li class="nav-item">
+        <a class="nav-link" href="/service">Подробнее об услугах</a>
+      </li>
+		
+		<li class="nav-item">
+         <a class="nav-link" href="/guaranty">Гарантия</a>
+      </li>
+		
+		<li class="nav-item">
+         <a class="nav-link" href="/supplier">Наши поставщики</a>
+      </li>
+		
+		<li class="nav-item">
+        <a class="nav-link" href="/experience">Опыт</a>
+      </li>
+		
+	  <li class="nav-item">
+        <a class="nav-link" href="/payment">Оплата</a>
+      </li>
+		
+	  <li class="nav-item">
+        <a class="nav-link" href="/about">О нас</a>
+      </li>
+    </ul>
+	  
+    <span class="navbar-text">
+		Звоните по вопросам: <strong>+7(913)915-36-51</strong>
+    </span>
+  </div>
+</nav>
+
+    <!-- we do not really need this id but it is better sometimes to have an id to know what is going on, just to norify urself obout sertain section or block -->
+    <section id="header" class="jumbotron text-center">
+        <h1 class="display-3">Ремонт, стройка, дизайн</h1>
+        <p class="lead">Мы сделаем ремонт вашего помещения на честных и понятных условиях</p>
+        <!-- we make this buttons not as buttuns but as an anker-tag - "a" cuz they will probably lead to link -->
+        <a href="/count" class="btn btn-primary">Расчитать примерную стоимость</a>
+        <a href="/showservice" class="btn btn-success">Показать список услуг</a>
+    </section>
+
+    <!-- a card give us a spacing and border -->
+    <section id="gallery">
+        <div class="container">
+            <div class="row">
+                <!-- we also add "mb-3" to add margin at buttom of every card so they do not touch each other when they stacked -->
+                <div class="col-lg-4 mb-3"> <!-- at large screen it will take 4 units out of 12, but befor it will take all block, so the cards will be stacked befor large screen-->
+                        <div class="card">
+                                <img class="card-img-top" src="https://images.unsplash.com/photo-1543525324-9146d43c2a4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Доверие</h5>
+                                    <p class="card-text">Наши клиенты - физические лица всегда советуют нас своим близким и родным, а оргинизации всегда поддерживают нас своими новыми проектами</p>
+                                   
+                                </div>
+                        </div>
+                </div>
+                <div class="col-lg-4 mb-3"> 
+                        <div class="card">
+                                <img class="card-img-top" src="https://images.unsplash.com/photo-1523413363574-c30aa1c2a516?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Честность</h5>
+                                    <p class="card-text">Довертесь нам и мы доведем нашу работу до конца</p>
+                                   
+                                </div>
+                        </div>
+                </div>
+                <div class="col-lg-4 mb-3"> 
+                        <div class="card">
+                                <img class="card-img-top" src="https://images.unsplash.com/photo-1566878466493-939ba590835f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Гарантия</h5>
+                                    <p class="card-text">Мы обязательно переделаем нашу работу, если будет какие-то вопросы в течении трех лет</p>
+                                    
+                                </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>

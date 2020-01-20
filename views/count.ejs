@@ -1,0 +1,168 @@
+<%- include("../partials/header") %>
+
+
+<body>
+<div id="priceList">
+ <li id="sq"> <input type="number" value="2"> Квадратура </li>
+ <li> <input type="checkbox" value="500.00"> Покраска стен квМ 500 р </li>
+ <li> <input type="checkbox" value="300.00"> Шпатлевка стен квМ 300 р </li>
+ <li> <input type="checkbox" value="400.00"> Шпатлевка стен финишная квМ 400 р </li>
+ <div id="priceTotal" />
+</div>
+
+<script type="text/javascript">
+	
+var msq = document.getElementById('sq');
+console.log(msq);
+// For: http://www.webdeveloper.com/forum/showthread.php?268169-How-can-I-create-a-function-that-calculate-total-price-of-products&daysprune=30
+
+// (function() { /* Place BELOW all <li> tags */
+//   var as = document.getElementById('priceList').getElementsByTagName("li");
+//   for( var i = 0; as[i]; i++ ) as[i].onclick = f;
+//   function f() {
+//     var sum = 0;
+// 	  //here msq (meter square) i want to take the value from here to use it to multiply with, but the user need to input this value by himself
+// 	var msq = document.getElementById('sq');
+//     var cb = document.getElementById('priceList').getElementsByTagName('input');
+//     for( var i=0; cb[i]; i++ ) if (cb[i].checked) { sum += cb[i].value*msq; }
+//     document.getElementById('priceTotal').innerHTML = 'Всего: руб '+sum.toFixed(2);
+//   }
+// })();
+// Above modified from: http://www.codingforums.com/showthread.php?t=281682
+
+</script>
+</body>
+
+
+
+
+
+<!-- <head>
+
+	<script>
+
+	//ARRAY
+	var eventEquipmentArray = new Array();
+	eventEquipmentArray["Пропитка стен"] = 50;
+	eventEquipmentArray["Шпатлевка стен"] = 290;
+	eventEquipmentArray["Шпатлевка стен финишная"] = 200;
+
+
+	//CHECKBOX - EVENT EQUIPMENT
+	function getEventEquipment() {
+	  var EventEquipment = 0;
+	  var theForm = document.forms["quote"];
+	  var selectedEquipment = theForm.elements["selectedEquipment"];
+		
+// Now += is a short hand. i = i + something is same as i += something. Also || 0, is a short hand to check if first value is available and not falsy and if not, it will return second value. So for cases where you do not have key in array, instead of undefined, return 0. Like 250W Moving Head is not available in array and will return undefined. So 0 is preferred here 
+
+	  for (var i = 0; i < selectedEquipment.length; i++) {
+		if(selectedEquipment[i].checked){
+			EventEquipment += eventEquipmentArray[selectedEquipment[i].value] || 0;
+		}
+	  }
+
+	  return EventEquipment;
+	}
+
+	//DIV - TOTAL PRICE TEST
+	function getTotals() {
+	  //var totalPrice = getEventDuration() + getEventSuburb() + getEventEquipment();
+	  var totalPrice = getEventEquipment();
+	  var totalPriceDIV = document.getElementById("totalPrice");
+	  totalPriceDIV.innerText = "Цена: " + totalPrice + " руб";
+	}
+
+	</script>
+	
+</head>
+
+
+<body>
+	<container>
+		<form id="quote">
+	  <p>
+		<label>
+		  <input type="checkbox" name="selectedEquipment" value="Пропитка стен" id="selectedEquipment_0" onChange="getTotals()" /> Пропитка стен </label>
+		<br />
+		<label>
+		  <input type="checkbox" name="selectedEquipment" value="Шпатлевка стен" id="selectedEquipment_1" onChange="getTotals()" /> Шпатлевка стен</label>
+		<br />
+		<label>
+		  <input type="checkbox" name="selectedEquipment" value="Шпатлевка стен финишная" id="selectedEquipment_2" onChange="getTotals()" />Шпатлевка стен финишная</label>
+		<br />
+
+	  <div id="totalPrice" style="color: red; text-align: center; font-size: 18px;"></div>
+
+		</form>
+		
+</container>
+</body>
+ -->
+
+
+
+
+
+
+<!-- <head>
+	<script>
+		
+	$(function() {
+		$('input').click(function(){
+
+			var total = 0;
+			$('input:checked').each(function(index, item) {
+				total += parseFloat(item.value);
+			});
+			$('.total').text(total);
+		});
+	});
+		
+	</script>
+</head>
+
+<body>
+
+	<input type="checkbox" value="Покраска мКВ 5000"> Покраска 5000</input><br/>
+	<input type="checkbox" value="Покраска обои мКВ 3000"> 3000</input><br/>
+	<input type="checkbox" value="Отделка пола мКВ 2000"> 2000</input><br/>
+
+Сумма: руб <span class="total"></span>
+	
+</body> -->
+	
+
+
+<!-- <html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Get Check Box Value</title>
+    <style>
+        .container {
+            margin: 100px 50px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <input type="checkbox" class="checks" value="A"> Покраска м2<br>
+    <input type="checkbox" class="checks" value="B"> Ремонт сантехнический<br>
+    <input type="checkbox" class="checks" value="C"> Замена полов<br>
+    <br><br>
+    <a href="#" onclick="getValue();return false;">Получить стоимость</a>
+</div>
+<script>
+function getValue() {
+    var checks = document.getElementsByClassName('checks');
+    var str = '';
+    for ( i = 0; i < 3; i++) {
+        if ( checks[i].checked === true ) {
+            str += checks[i].value + " ";
+        }
+    }
+    alert(str);
+}
+</script>
+</body> -->

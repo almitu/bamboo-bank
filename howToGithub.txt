@@ -1,0 +1,26 @@
+> ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+
+then enter a directory to save the ssh key 
+
+- so the ssh password will be saved in this directory like: /root/.ssh/id_rsa.pub.
+here is the key fingearprint:
+SHA256:uP93ZFUunymcGhlull8IwNjE+/P1lOSZTMyLco2Y3Ks
+
+then enter a password to associate the directory with:
+my password: myNeuesPass
+
+
+1. first we need to make sure the project is a GIT project
+
+2. add my GitHub repository where to push my project:
+
+> git remote add origin urlOfMyGitHubRepository:
+example: > git remote addd origin https://github.com/almitu/bamboo-bank.git
+
+3. check whether the repository is added:
+
+> git remote -v 
+wll show us "push url"
+
+4. git push -u origin master 
+
