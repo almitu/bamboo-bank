@@ -1,16 +1,9 @@
-> ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
-
-then enter a directory to save the ssh key 
-
-- so the ssh password will be saved in this directory like: /root/.ssh/id_rsa.pub.
-here is the key fingearprint:
-SHA256:uP93ZFUunymcGhlull8IwNjE+/P1lOSZTMyLco2Y3Ks
-
-then enter a password to associate the directory with:
-my password: myNeuesPass
-
 
 1. first we need to make sure the project is a GIT project
+> git init
+> git add .  //adds all files, so be sure there is no private info
+> git commit -m "initial commit"
+
 
 2. add my GitHub repository where to push my project:
 
