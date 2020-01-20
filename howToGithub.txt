@@ -1,4 +1,7 @@
 
+guide form GITHUB:
+https://help.github.com/en/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line
+
 1. first we need to make sure the project is a GIT project
 > git init
 > git add .  //adds all files, so be sure there is no private info
@@ -8,7 +11,8 @@
 2. add my GitHub repository where to push my project:
 
 > git remote add origin urlOfMyGitHubRepository:
-example: > git remote addd origin https://github.com/almitu/bamboo-bank.git
+example:
+> git remote addd origin https://github.com/almitu/bamboo-bank.git
 
 3. check whether the repository is added:
 
