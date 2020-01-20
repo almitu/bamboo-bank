@@ -12,7 +12,7 @@ https://help.github.com/en/github/importing-your-projects-to-github/adding-an-ex
 
 > git remote add origin urlOfMyGitHubRepository:
 example:
-> git remote addd origin https://github.com/almitu/bamboo-bank.git
+> git remote add origin https://github.com/almitu/bamboo-bank.git
 
 3. check whether the repository is added:
 
@@ -20,4 +20,30 @@ example:
 wll show us "push url"
 
 4. git push -u origin master 
+
+
+****************************************************************************
+
+if we need to remove to change the remote to SSH or something else we type:
+
+> git remote rm _remoteToBeRemoved  // origin - is usualy the default remote
+
+example:
+> git remote rm origin
+
+*****************************************************************************
+
+
+if there is an error when we are trying to push the project we can force the push, but we need to know that with that forced push we will delete the remoted branch and change it insted with our local, so keep in mind that it might have dristic changes for the project
+
+> git push -f origin <branch> 
+example: 
+> git push -f origin master 
+https://stackoverflow.com/questions/10298291/cannot-push-to-github-keeps-saying-need-merge
+
+
+
+
+
+
 
